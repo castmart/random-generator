@@ -23,6 +23,8 @@ class RandomGeneratorController(val randomGeneratorService: IRandomGeneratorServ
     }
 
     data class RandomGeneratedResponse(
-        val from: Int, val to: Int, val value: Int
+        val from: Int,
+        val to: Int,
+        val value: Int
     )
 }

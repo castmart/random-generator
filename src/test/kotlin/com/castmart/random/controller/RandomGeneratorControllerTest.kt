@@ -10,7 +10,6 @@ import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.get
 
-
 @WebMvcTest(RandomGeneratorController::class)
 @ContextConfiguration(
     classes = [
@@ -21,6 +20,7 @@ import org.springframework.test.web.servlet.get
 class RandomGeneratorControllerTest {
 
     @Autowired lateinit var mockMvc: MockMvc
+
     @Autowired lateinit var randomGeneratorService: IRandomGeneratorService
 
     @Test
