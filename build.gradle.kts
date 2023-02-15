@@ -23,6 +23,11 @@ dependencies {
 
     implementation("org.springframework.boot:spring-boot-starter-web")
 
+    implementation("com.fasterxml.jackson.core:jackson-core")
+    implementation("com.fasterxml.jackson.core:jackson-annotations")
+    implementation("com.fasterxml.jackson.core:jackson-databind")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
     implementation("org.springframework.cloud:spring-cloud-aws-messaging:2.2.6.RELEASE")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")

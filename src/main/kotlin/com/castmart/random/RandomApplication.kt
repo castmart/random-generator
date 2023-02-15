@@ -3,6 +3,8 @@ package com.castmart.random
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain
 import com.amazonaws.services.sqs.AmazonSQSAsync
 import com.amazonaws.services.sqs.AmazonSQSAsyncClientBuilder
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -22,6 +24,12 @@ fun main(args: Array<String>) {
 @Configuration
 @EnableSqs
 class AWSBeanClients {
+
+    @Bean
+    @Primary
+    fun registerJacksonKotlinObjectMapper(): ObjectMapper {
+        return jacksonObjectMapper()
+    }
 
     @Bean
     @Qualifier("queue-name")
